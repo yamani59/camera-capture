@@ -5,9 +5,65 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+video {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.capture {
+  content: ' ';
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  left: 50%;
+  bottom: 3em;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  padding: 1em;
+  border: 2px solid black;
+}
+
+.capture::after {
+  content: ' ';
+  width: 70px;
+  height: 70px;
+  position: fixed;
+  z-index: 99;
+  left: 50%;
+  bottom: -0.7em;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  padding: 1em;
+  border: 2px solid white;
+}
+
+canvas {
+  /* display: none; */
+  position: fixed;
+  top: 1em;
+  z-index: 99;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 2px solid white;
+}
+
+.changeCamera {
+  width: 50px;
+  height: 50px;
+  filter: brightness(0) invert(1);
+  position: fixed;
+  left: 15%;
+  transform: translate(-50%);
+  bottom: 3.5em;
 }
